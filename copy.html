@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks - Coffee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background: #121517;
+      }
+      
+      .bg-color {
+        background: #121517;
+      }
+      
+      .primary-color {
+        color: #DADADA;
+      }
+      
+      .secondary-color {
+        color: #333333;
+      }
+      
+      .gradient-text {
+        background: linear-gradient(to right, #237249, #35C66B);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .btn-primary {
+        background: linear-gradient(265.23deg, #237249 6.79%, #35C66B 97.2%);
+        border-radius: 82.83px;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-primary:hover {
+        transform: scale(1.05);
+        background: linear-gradient(265.23deg, #35C66B 6.79%, #237249 97.2%);
+      }
+      
+      .btn-secondary {
+        background: #121517;
+        border: 1.02px solid rgba(218, 218, 218, 0.3);
+        border-radius: 82.83px;
+        transition: all 0.3s ease;
+      }
+      
+      .btn-secondary:hover {
+        background: #1A1F1C;
+        transform: scale(1.05);
+      }
+      
+      .feature-circle {
+        background: linear-gradient(267.2deg, #237249 3.05%, #35C66B 75.72%);
+        box-shadow: 0px 4px 41px 0px rgba(0, 0, 0, 0.39);
+      }
+      
+      .mobile-menu {
+        display: none;
+      }
+      
+      .mobile-menu.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body class="bg-color">
+    <header>
+      <!-- Navigation -->
+      <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="w-32 sm:w-40 lg:w-48">
+            <a href="/index.html">
+              <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="35" fill="#00704A"/>
+                <circle cx="40" cy="40" r="30" fill="white"/>
+                <circle cx="40" cy="40" r="25" fill="#00704A"/>
+                <text x="80" y="50" fill="#00704A" font-size="32" font-weight="bold" font-family="Montserrat">Starbucks</text>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <ul class="hidden lg:flex gap-8 xl:gap-16 items-center primary-color">
+            <li class="font-normal text-base xl:text-lg hover:text-green-500 transition-colors duration-300">
+              <a href="#">Home</a>
+            </li>
+            <li class="font-normal text-base xl:text-lg hover:text-green-500 transition-colors duration-300">
+              <a href="#">Select</a>
+            </li>
+            <li class="font-normal text-base xl:text-lg hover:text-green-500 transition-colors duration-300">
+              <a href="#">Shop</a>
+            </li>
+          </ul>
+
+          <!-- Hamburger Icon -->
+          <button id="menuBtn" class="lg:hidden text-white p-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu lg:hidden mt-4">
+          <ul class="flex flex-col gap-4 primary-color bg-gray-800 rounded-lg p-4">
+            <li class="font-normal text-base hover:text-green-500 transition-colors duration-300">
+              <a href="#">Home</a>
+            </li>
+            <li class="font-normal text-base hover:text-green-500 transition-colors duration-300">
+              <a href="#">Select</a>
+            </li>
+            <li class="font-normal text-base hover:text-green-500 transition-colors duration-300">
+              <a href="#">Shop</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <main class="container mx-auto px-4 sm:px-6 lg:px-8 mt-8 lg:mt-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+          <!-- Left -->
+          <div class="relative order-2 lg:order-1">
+            <!-- Info Left -->
+            <div class="flex flex-col gap-6 lg:gap-12">
+              <!-- Info H1 -->
+              <div>
+                <h1 class="font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-tight primary-color">
+                  New Cafe <br />by
+                  <span class="gradient-text">StarBucks</span>
+                </h1>
+                <p class="primary-color font-normal text-sm sm:text-base lg:text-xl leading-relaxed tracking-tight mt-4 lg:mt-8">
+                  Have time to buy the most harmonious drinks in the new Starbucks coffee and don't forget about the discount!
+                </p>
+              </div>
+              
+              <!-- Buttons -->
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button class="btn-primary py-3 px-8 sm:py-4 sm:px-12 lg:py-5 lg:px-20 font-semibold text-base sm:text-lg lg:text-2xl text-white">
+                  Select a coffee
+                </button>
+                <button class="btn-secondary py-3 px-6 sm:py-4 sm:px-10 font-normal text-base sm:text-lg lg:text-2xl text-white">
+                  More
+                </button>
+              </div>
+
+              <!-- Statistics -->
+              <div class="grid grid-cols-3 gap-4 lg:gap-8 mt-4 lg:mt-0">
+                <div class="flex flex-col items-center lg:items-start">
+                  <span class="font-normal text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight primary-color">
+                    9k <span class="text-green-600 font-semibold">+</span>
+                  </span>
+                  <span class="font-normal text-xs sm:text-sm lg:text-xl leading-snug tracking-tight primary-color text-center lg:text-left">
+                    Premium <br />Users
+                  </span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <span class="font-normal text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight primary-color">
+                    2k <span class="text-green-600 font-semibold">+</span>
+                  </span>
+                  <span class="font-normal text-xs sm:text-sm lg:text-xl leading-snug tracking-tight primary-color text-center">
+                    Happy <br />Customer
+                  </span>
+                </div>
+                <div class="flex flex-col items-center lg:items-end">
+                  <span class="font-normal text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight primary-color">
+                    28 <span class="text-green-600 font-semibold">+</span>
+                  </span>
+                  <span class="font-normal text-xs sm:text-sm lg:text-xl leading-snug tracking-tight primary-color text-center lg:text-right">
+                    Awards <br />Winning
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="relative order-1 lg:order-2 flex items-center justify-center">
+            <div class="w-full max-w-md lg:max-w-full">
+              <svg viewBox="0 0 400 500" class="w-full h-auto">
+                <!-- Coffee Cup -->
+                <defs>
+                  <linearGradient id="cupGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#237249;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#35C66B;stop-opacity:1" />
+                  </linearGradient>
+                </defs>
+                <ellipse cx="200" cy="450" rx="120" ry="20" fill="rgba(0,0,0,0.2)"/>
+                <path d="M150 200 L150 400 Q150 420 170 420 L230 420 Q250 420 250 400 L250 200 Z" fill="url(#cupGradient)"/>
+                <ellipse cx="200" cy="200" rx="50" ry="15" fill="#35C66B"/>
+                <rect x="250" y="250" width="60" height="40" rx="20" fill="#237249" opacity="0.8"/>
+                <circle cx="200" cy="100" r="40" fill="white" opacity="0.3"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- We Have Section -->
+      <section class="container mx-auto px-4 sm:px-6 lg:px-8 mt-12 lg:mt-20">
+        <div class="rounded-3xl lg:rounded-[46px] bg-gradient-to-br from-white via-gray-200 to-gray-100 p-6 sm:p-8 lg:p-12">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <!-- Feature 1 -->
+            <div class="relative">
+              <div class="absolute top-2 left-1/2 -translate-x-1/2 sm:left-2 sm:translate-x-0 w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full feature-circle -z-10"></div>
+              <div class="flex flex-col items-center justify-center text-center pt-4">
+                <div class="text-6xl mb-4">👍</div>
+                <div>
+                  <h4 class="font-medium text-2xl sm:text-3xl leading-tight tracking-tight secondary-color">
+                    Tasty
+                  </h4>
+                  <p class="font-normal text-base sm:text-lg lg:text-xl leading-relaxed tracking-tight text-gray-700 mt-2">
+                    We have the most <br />delicious coffee
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="relative">
+              <div class="absolute top-2 left-1/2 -translate-x-1/2 sm:left-2 sm:translate-x-0 w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full feature-circle -z-10"></div>
+              <div class="flex flex-col items-center justify-center text-center pt-4">
+                <div class="text-6xl mb-4">🚀</div>
+                <div>
+                  <h4 class="font-medium text-2xl sm:text-3xl leading-tight tracking-tight secondary-color">
+                    Fast
+                  </h4>
+                  <p class="font-normal text-base sm:text-lg lg:text-xl leading-relaxed tracking-tight text-gray-700 mt-2">
+                    Our cafe will serve <br />you quickly
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="relative sm:col-span-2 lg:col-span-1">
+              <div class="absolute top-2 left-1/2 -translate-x-1/2 sm:left-2 sm:translate-x-0 w-32 h-32 sm:w-36 sm:h-36 lg:w-40 lg:h-40 rounded-full feature-circle -z-10"></div>
+              <div class="flex flex-col items-center justify-center text-center pt-4">
+                <div class="text-6xl mb-4">💰</div>
+                <div>
+                  <h4 class="font-medium text-2xl sm:text-3xl leading-tight tracking-tight secondary-color">
+                    Available
+                  </h4>
+                  <p class="font-normal text-base sm:text-lg lg:text-xl leading-relaxed tracking-tight text-gray-700 mt-2">
+                    Cafe will serve at the <br />most pleasant prices
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>
