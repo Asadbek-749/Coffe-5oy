@@ -15,7 +15,7 @@
   <body class="bg-color">
     <header>
       <!-- Navigation  -->
-      <nav class="container flex items-center py-12">
+      <nav class="container flex py-12 m-auto">
         <!-- Logo  -->
         <div class="w-48.75 h-10.25 mr-23.5">
           <a href="/index.html">
@@ -48,197 +48,363 @@
           </button>
         </div>
       </nav>
+    </header>
 
-      <!-- Hero Section  -->
-      <main class="container grid grid-cols-2 gap-38.75">
-        <!-- Left  -->
-        <div class="relative">
-          <!-- Blur background -->
-          <div class="absolute inset-0 pointer-events-none -z-10">
-            <!-- Chap yuqori -->
-            <img
-              src="/images/svg/blur-main.svg"
-              alt="Yashil blur"
-              class="absolute -top-30 -left-30"
-            />
-            <!-- O‘ng past -->
-            <img
-              src="/images/svg/blur2-main.svg"
-              alt="Oq blur"
-              class="absolute -bottom-30 -right-30"
-            />
+    <!-- Hero Section  -->
+    <main class="container m-auto grid grid-cols-2 gap-38.75">
+      <!-- Left  -->
+      <div class="relative">
+        <!-- Blur background -->
+        <div class="absolute inset-0 pointer-events-none -z-10">
+          <!-- Chap yuqori -->
+          <img
+            src="/images/svg/blur-main.svg"
+            alt="Yashil blur"
+            class="absolute -top-30 -left-30"
+          />
+          <!-- O‘ng past -->
+          <img
+            src="/images/svg/blur2-main.svg"
+            alt="Oq blur"
+            class="absolute -bottom-30 -right-30"
+          />
+        </div>
+
+        <!-- Info Left  -->
+        <div class="flex flex-col gap-13.5">
+          <!-- Info H1 -->
+          <div>
+            <h1
+              class="font-['Montserrat'] primary-color font-extrabold text-[80px] leading-[1.09] tracking-[-0.03em]"
+            >
+              New Cafe <br />by
+              <span
+                class="bg-linear-to-r from-[#237249] to-[#35C66B] bg-clip-text text-transparent"
+                >StarBucks</span
+              >
+            </h1>
+            <p
+              class="primary-color font-normal text-[20px] leading-[1.63] tracking-[-0.02em] mt-13.5"
+            >
+              Have time to buy the most harmonious drinks in the <br />
+              new Starbucks coffee and don't forget about the discount!
+            </p>
+          </div>
+          <!-- Button -->
+          <div class="flex gap-4">
+            <button
+              class="cursor-pointer rounded-[82.83px] bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] py-5 px-20 font-['Montserrat'] font-[639] text-[24px] leading-[1.46] tracking-[-0.02em] text-white transition-all duration-300 ease-out hover:scale-105 hover:bg-[linear-gradient(265.23deg,#35C66B_6.79%,#237249_97.2%)]"
+            >
+              Select a coffee
+            </button>
+
+            <button
+              class="cursor-pointer rounded-[82.83px] border-[1.02px] bg-[#121517] border-[linear-gradient(146.68deg,#DADADA_-17.38%,rgba(218,218,218,0)_91.61%)] [border-image-slice:1] font-['Montserrat'] font-normal text-[24px] leading-[1.46] tracking-[-0.03em] px-10 py-4 text-white transition-all duration-300 ease-out hover:bg-[#1A1F1C] hover:scale-105"
+            >
+              More
+            </button>
           </div>
 
-          <!-- Info Left  -->
-          <div class="flex flex-col gap-13.5">
-            <!-- Info H1 -->
-            <div>
-              <h1
-                class="font-['Montserrat'] primary-color font-extrabold text-[80px] leading-[1.09] tracking-[-0.03em]"
+          <!-- Statistika -->
+          <div class="flex items-center justify-between">
+            <div class="flex flex-col items-baseline">
+              <span
+                class="font-['Montserrat'] font-normal text-[62px] leading-[1.09] tracking-[-0.03em] primary-color"
+                >9k <span class="font-semibold text-green-600">+</span></span
+              ><span
+                class="font-['Montserrat'] font-normal text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
+                >Premium <br />Users</span
               >
-                New Cafe <br />by
-                <span
-                  class="bg-linear-to-r from-[#237249] to-[#35C66B] bg-clip-text text-transparent"
-                  >StarBucks</span
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="font-['Montserrat'] font-normal text-[62px] leading-[1.09] tracking-[-0.03em] primary-color"
+                >2k <span class="font-semibold text-green-600">+</span></span
+              ><span
+                class="font-['Montserrat'] font-normal text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
+                >Happy <br />Customer</span
+              >
+            </div>
+            <div class="flex flex-col items-center">
+              <span
+                class="font-['Montserrat'] font-normal text-[62px] leading-[1.09] tracking-[-0.03em] primary-color"
+                >28 <span class="font-semibold text-green-600">+</span></span
+              ><span
+                class="font-['Montserrat'] font-normal text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
+                >Awards <br />
+                Winning</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right  -->
+      <div class="relative">
+        <!-- Blur background -->
+        <div class="absolute inset-0 pointer-events-none -z-10">
+          <!-- Chap yuqori -->
+          <img
+            src="/images/img/blur-white.png"
+            alt="Yashil blur"
+            class="absolute -top-10 -left-35"
+          />
+          <!-- O‘ng past -->
+          <img
+            src="/images/svg/blur-green.svg"
+            alt="Oq blur"
+            class="absolute -bottom-40 -right-10"
+          />
+        </div>
+        <div class="max-h-full">
+          <img src="/images/img/hero-img.png" alt="image" />
+        </div>
+      </div>
+    </main>
+
+    <!-- We Have Section  -->
+    <section class="container m-auto mt-27.75 pl-20 pr-20">
+      <div
+        class="rounded-[46px] bg-[linear-gradient(264.52deg,#FFFFFF_4.95%,#E5E5E5_64.19%,#FBFBFB_88.37%)] pt-12.75 pl-19.5 pr-19.5 pb-9"
+      >
+        <div class="grid grid-cols-3 gap-34.5">
+          <!-- Colms  -->
+          <div class="relative z-10">
+            <!-- Liked  -->
+            <div class="flex flex-col items-center justify-center text-center">
+              <div>
+                <img src="/images/svg/liked.svg" alt="liked" />
+              </div>
+              <div>
+                <h4
+                  class="font-medium text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
                 >
-              </h1>
-              <p
-                class="primary-color font-normal text-[20px] leading-[1.63] tracking-[-0.02em] mt-13.5"
+                  Tasty
+                </h4>
+                <p
+                  class="font-normal text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
+                >
+                  We have the most <br />
+                  delicious coffee
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Colms  -->
+          <div class="flex flex-col items-center justify-center text-center">
+            <div>
+              <img src="/images/svg/raketa-icon.svg" alt="liked" />
+            </div>
+            <div>
+              <h4
+                class="font-medium text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
               >
-                Have time to buy the most harmonious drinks in the <br />
-                new Starbucks coffee and don't forget about the discount!
+                Fast
+              </h4>
+              <p
+                class="font-normal text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
+              >
+                Our cafe will serve <br />
+                you quickly
               </p>
             </div>
-            <!-- Button -->
-            <div class="flex gap-4">
-              <button
-                class="cursor-pointer rounded-[82.83px] bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] py-5 px-20 font-['Montserrat'] font-[639] text-[24px] leading-[1.46] tracking-[-0.02em] text-white transition-all duration-300 ease-out hover:scale-105 hover:bg-[linear-gradient(265.23deg,#35C66B_6.79%,#237249_97.2%)]"
+          </div>
+
+          <!-- Colms  -->
+          <div class="flex flex-col items-center justify-center text-center">
+            <div>
+              <img
+                class="w-46.25 h-45"
+                src="/images/svg/money-icon.svg"
+                alt="liked"
+              />
+            </div>
+            <div>
+              <h4
+                class="font-medium text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
               >
-                Select a coffee
-              </button>
-
-              <button
-                class="cursor-pointer rounded-[82.83px] border-[1.02px] bg-[#121517] border-[linear-gradient(146.68deg,#DADADA_-17.38%,rgba(218,218,218,0)_91.61%)] [border-image-slice:1] font-['Montserrat'] font-normal text-[24px] leading-[1.46] tracking-[-0.03em] px-10 py-4 text-white transition-all duration-300 ease-out hover:bg-[#1A1F1C] hover:scale-105"
+                Available
+              </h4>
+              <p
+                class="font-normal text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
               >
-                More
+                Cafe will serveat the <br />
+                most pleasant prices
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- We make Section  -->
+    <section class="container m-auto mt-25">
+      <div class="flex items-center justify-between">
+        <!-- Section Img -->
+        <div>
+          <img src="/images/img/img-section.png" alt="images" />
+        </div>
+
+        <!-- Info  -->
+        <div class="flex flex-col gap-15.75">
+          <div>
+            <h1
+              class="font-extrabold primary-color text-[80px] leading-[109%] tracking-[-0.03em]"
+            >
+              We make <br />
+              <span
+                class="font-extrabold text-[80px] leading-[109%] tracking-[-0.03em] bg-[linear-gradient(267.2deg,#237249_3.05%,#35C66B_75.72%)] bg-clip-text text-transparent"
+                >delicious</span
+              >
+            </h1>
+          </div>
+          <div>
+            <p
+              class="font-normal text-[20px] primary-color leading-[163%] tracking-[-0.02em]"
+            >
+              Only in 2021 we have made more than 100,000 <br />
+              orders for you, your loved ones, all of you, and in <br />
+              2022 we are ready to destroy the market
+            </p>
+          </div>
+          <div class="relative">
+            <div>
+              <img src="/images/img/make-img2.png" alt="images" />
+            </div>
+            <div class="absolute top-[40%] left-[30%]">
+              <button
+                class="flex cursor-pointer items-center gap-3 py-5 px-10.5 rounded-[83px] bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)]"
+              >
+                <img
+                  src="/images/svg/play-icon.svg"
+                  alt="icon"
+                  class="w-5 h-5"
+                />
+                <span
+                  class="font-normal primary-color text-[20px] leading-[163%] tracking-[-0.02em]"
+                >
+                  Cooking Process
+                </span>
               </button>
             </div>
-
-            <!-- Statistika -->
-            <div class="flex items-center justify-between">
-              <div class="flex flex-col items-baseline">
-                <span
-                  class="font-['Montserrat'] font-normal text-[62px] leading-[1.09] tracking-[-0.03em] primary-color"
-                  >9k <span class="font-semibold text-green-600">+</span></span
-                ><span
-                  class="font-['Montserrat'] font-normal text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
-                  >Premium <br />Users</span
-                >
-              </div>
-              <div class="flex flex-col items-center">
-                <span
-                  class="font-['Montserrat'] font-normal text-[62px] leading-[1.09] tracking-[-0.03em] primary-color"
-                  >2k <span class="font-semibold text-green-600">+</span></span
-                ><span
-                  class="font-['Montserrat'] font-normal text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
-                  >Happy <br />Customer</span
-                >
-              </div>
-              <div class="flex flex-col items-center">
-                <span
-                  class="font-['Montserrat'] font-normal text-[62px] leading-[1.09] tracking-[-0.03em] primary-color"
-                  >28 <span class="font-semibold text-green-600">+</span></span
-                ><span
-                  class="font-['Montserrat'] font-normal text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
-                  >Awards <br />
-                  Winning</span
-                >
-              </div>
-            </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Right  -->
-        <div class="relative">
-          <!-- Blur background -->
-          <div class="absolute inset-0 pointer-events-none -z-10">
-            <!-- Chap yuqori -->
-            <img
-              src="/images/img/blur-white.png"
-              alt="Yashil blur"
-              class="absolute -top-10 -left-35"
-            />
-            <!-- O‘ng past -->
-            <img
-              src="/images/svg/blur-green.svg"
-              alt="Oq blur"
-              class="absolute -bottom-40 -right-10"
-            />
-          </div>
-          <div class="max-h-full">
-            <img src="/images/img/hero-img.png" alt="image" />
-          </div>
+    <!-- New Our Produc  -->
+    <section class="container py-24 text-white ">
+      <div class="max-w-[1200px] mx-auto px-4">
+        <!-- Top text -->
+        <div class="flex items-start justify-between mb-20">
+          <h2
+            class="text-[80px] leading-[109%] tracking-[-0.03em] font-extrabold"
+          >
+            New Our <br />
+            <span
+              class="bg-[linear-gradient(267.2deg,#237249_3.05%,#35C66B_75.72%)] bg-clip-text text-transparent"
+            >
+              Products
+            </span>
+          </h2>
+
+          <p
+            class="max-w-105 text-[20px] leading-[163%] tracking-[-0.02em] text-white/70"
+          >
+            Have time to buy the most harmonious drinks in the new Starbucks
+            coffee and don't forget about the discount! Starbucks coffee and
+            don't forget about the discount!
+          </p>
         </div>
-      </main>
 
-      <!-- We Have Section  -->
-      <section class="container mt-27.75 pl-38.75 pr-27.5">
-        <div
-          class="rounded-[46px] bg-[linear-gradient(264.52deg,#FFFFFF_4.95%,#E5E5E5_64.19%,#FBFBFB_88.37%)] pt-12.75 pl-19.5 pr-19.5 pb-9"
-        >
-          <div class="grid grid-cols-3 gap-34.5">
-            <!-- Colms  -->
-            <div class="relative z-10 ">
-              <!-- Circle  -->
-              <div
-                class="absolute -z-1 top-3 left-3 w-37 h-37 rounded-full bg-[linear-gradient(267.2deg,#237249_3.05%,#35C66B_75.72%)] shadow-[0px_4px_41px_0px_#00000063]"
-              ></div>
-
-              <!-- Liked  -->
-              <div class="flex flex-col items-center justify-center text-center">
-                <div>
-                  <img src="/images/img/liked.png" alt="liked" />
-                </div>
-                <div>
-                  <h4
-                    class="font-medium text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
-                  >
-                    Tasty
-                  </h4>
-                  <p
-                    class=" font-normal text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
-                  >
-                    We have the most <br />
-                    delicious coffee
-                  </p>
-                </div>
-              </div>
+        <!-- Cards -->
+        <div class="flex items-center gap-8">
+          <!-- Card -->
+          <div
+            class="w-[320px] h-130 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_at_top,#1C2A23,#0B0E0D)] flex flex-col items-center text-center p-8"
+          >
+            <div
+              class="flex items-center justify-center mb-8 w-50 h-65"
+            >
+             <img src="/images/img/usama-akram-zCDAYROwLC0-unsplash 2 (2).png" alt="">
             </div>
 
-            <!-- Colms  -->
+            <h3 class="text-[24px] font-semibold mb-2">Fast</h3>
+            <p class="mb-6 text-white/60">Our cafe will serve you quickly</p>
 
-              <!-- Circle  -->
-              <div class="flex flex-col items-center justify-center text-center">
-                <div>
-                  <img src="/images/svg/raketa-icon.svg" alt="liked" />
-                </div>
-                <div>
-                  <h4
-                    class="font-medium text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
-                  >
-                    Fast
-                  </h4>
-                  <p
-                    class=" font-normal text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
-                  >
-                    Our cafe will serve <br> you quickly
-                  </p>
-                </div>
-              </div>
-
-            <!-- Colms  -->
-              <div class="flex flex-col items-center justify-center text-center">
-                <div>
-                  <img class="w-46.25 h-45" src="/images/svg/money-icon.svg" alt="liked" />
-                </div>
-                <div>
-                  <h4
-                    class="font-medium text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
-                  >
-                    Available
-                  </h4>
-                  <p
-                    class=" font-normal text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
-                  >
-                    Cafe will serveat the <br> most pleasant prices
-                  </p>
-                </div>  
+            <div class="flex items-center gap-6 mb-8">
+              <span class="text-[24px] font-semibold">7,45$</span>
+              <span class="text-white/60">330 ml</span>
             </div>
+
+            <button
+              class="rounded-[83px] px-8 py-3 bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] font-medium"
+            >
+              Buy Product
+            </button>
           </div>
+
+           <!-- Card -->
+          <div
+            class="w-[320px] h-130 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_at_top,#1C2A23,#0B0E0D)] flex flex-col items-center text-center p-8"
+          >
+            <div
+              class="flex items-center justify-center mb-8 w-50 h-65"
+            >
+             <img src="/images/img/usama-akram-zCDAYROwLC0-unsplash 2.png" alt="">
+            </div>
+
+            <h3 class="text-[24px] font-semibold mb-2">Fast</h3>
+            <p class="mb-6 text-white/60">Our cafe will serve you quickly</p>
+
+            <div class="flex items-center gap-6 mb-8">
+              <span class="text-[24px] font-semibold">7,45$</span>
+              <span class="text-white/60">330 ml</span>
+            </div>
+
+            <button
+              class="rounded-[83px] px-8 py-3 bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] font-medium"
+            >
+              Buy Product
+            </button>
+          </div>
+
+          <!-- Active Card -->
+          <div
+            class="w-[320px] h-130 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_at_top,#1C2A23,#0B0E0D)] flex flex-col items-center text-center p-8"
+          >
+            <div
+              class="flex items-center justify-center mb-8 w-55 h-70"
+            >
+              <img src="/images/img/usama-akram-zCDAYROwLC0-unsplash 2 (1).png" alt="">
+            </div>
+
+            <h3 class="text-[26px] font-semibold mb-2">Cappuccino</h3>
+            <p class="mb-6 text-white/60">Our cafe will serve you quickly</p>
+
+            <div class="flex items-center gap-6 mb-8">
+              <span class="text-[26px] font-semibold">7,45$</span>
+              <span class="text-white/60">330 ml</span>
+            </div>
+
+            <button
+              class="rounded-[83px] px-10 py-2.5 bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] font-medium"
+            >
+              Buy Product
+            </button>
+          </div>
+
+          <!-- Arrow -->
+          <button
+            class="ml-8 w-16 h-16 rounded-full border border-[#35C66B] flex items-center justify-center text-[#35C66B] hover:bg-[#35C66B] hover:text-black transition"
+          >
+            →
+          </button>
         </div>
-      </section>
-      <button id="white"></button>
-    </header>
+      </div>
+    </section>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
