@@ -15,15 +15,16 @@
   <body class="bg-color">
     <header>
       <!-- Navigation  -->
-      <nav class="container flex py-12 m-auto">
+      <nav class="container flex items-center justify-between px-4 py-6 m-auto md:py-12 md:px-0">
         <!-- Logo  -->
-        <div class="w-48.75 h-10.25 mr-23.5">
+        <div class="w-32 md:w-48.75 h-8 md:h-10.25 md:mr-23.5">
           <a href="/index.html">
-            <img src="/images/svg/StarBucks.svg" alt="StarBucks" />
+            <img src="/images/svg/StarBucks.svg" alt="StarBucks" class="object-contain w-full h-full" />
           </a>
         </div>
 
-        <ul class="flex gap-23.5 items-center primary-color">
+        <!-- Desktop Menu -->
+        <ul class="hidden lg:flex gap-23.5 items-center primary-color">
           <li
             class="font-normal text-[19.17px] leading-none tracking-normal hover:text-green-500 transition-colors duration-300"
           >
@@ -43,39 +44,56 @@
 
         <!-- Hamburger Icon  -->
         <div class="lg:hidden">
-          <button>
-            <img src="/images/svg/hamburger.svg" alt="hamburger" />
+          <button id="burger-btn" class="text-white focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
           </button>
         </div>
       </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-[#0B0E0D] border-t border-white/10">
+        <ul class="flex flex-col items-center gap-6 py-8 primary-color">
+          <li class="text-lg font-normal transition-colors duration-300 hover:text-green-500">
+            <a href="#" class="block">Home</a>
+          </li>
+          <li class="text-lg font-normal transition-colors duration-300 hover:text-green-500">
+            <a href="#" class="block">Select</a>
+          </li>
+          <li class="text-lg font-normal transition-colors duration-300 hover:text-green-500">
+            <a href="#" class="block">Shop</a>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <!-- Hero Section  -->
-    <main class="container m-auto grid grid-cols-2 gap-38.75">
+    <main class="container m-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-38.75 px-4 md:px-8 lg:px-0 mt-8 lg:mt-0">
       <!-- Left  -->
-      <div class="relative">
+      <div class="relative order-2 lg:order-1">
         <!-- Blur background -->
-        <div class="absolute inset-0 pointer-events-none -z-10">
+        <div class="absolute inset-0 hidden pointer-events-none -z-10 md:block">
           <!-- Chap yuqori -->
           <img
             src="/images/svg/blur-main.svg"
             alt="Yashil blur"
-            class="absolute -top-30 -left-30"
+            class="absolute opacity-50 -top-30 -left-30"
           />
-          <!-- O‘ng past -->
+          <!-- O'ng past -->
           <img
             src="/images/svg/blur2-main.svg"
             alt="Oq blur"
-            class="absolute -bottom-30 -right-30"
+            class="absolute opacity-50 -bottom-30 -right-30"
           />
         </div>
 
         <!-- Info Left  -->
-        <div class="flex flex-col gap-13.5">
+        <div class="flex flex-col gap-8 lg:gap-13.5">
           <!-- Info H1 -->
           <div>
             <h1
-              class="font-['Montserrat'] primary-color font-extrabold text-[80px] leading-[1.09] tracking-[-0.03em]"
+              class="font-['Montserrat'] primary-color font-extrabold text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[1.09] tracking-[-0.03em]"
             >
               New Cafe <br />by
               <span
@@ -84,53 +102,53 @@
               >
             </h1>
             <p
-              class="primary-color font-normal text-[20px] leading-[1.63] tracking-[-0.02em] mt-13.5"
+              class="primary-color font-normal text-base md:text-lg lg:text-[20px] leading-relaxed lg:leading-[1.63] tracking-[-0.02em] mt-4 lg:mt-13.5"
             >
-              Have time to buy the most harmonious drinks in the <br />
+              Have time to buy the most harmonious drinks in the <br class="hidden md:block" />
               new Starbucks coffee and don't forget about the discount!
             </p>
           </div>
           <!-- Button -->
-          <div class="flex gap-4">
+          <div class="flex flex-col gap-4 sm:flex-row">
             <button
-              class="cursor-pointer rounded-[82.83px] bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] py-5 px-20 font-['Montserrat'] font-[639] text-[24px] leading-[1.46] tracking-[-0.02em] text-white transition-all duration-300 ease-out hover:scale-105 hover:bg-[linear-gradient(265.23deg,#35C66B_6.79%,#237249_97.2%)]"
+              class="cursor-pointer rounded-full lg:rounded-[82.83px] bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] py-4 lg:py-5 px-12 lg:px-20 font-['Montserrat'] font-semibold text-lg lg:text-[24px] leading-[1.46] tracking-[-0.02em] text-white transition-all duration-300 ease-out hover:scale-105 hover:bg-[linear-gradient(265.23deg,#35C66B_6.79%,#237249_97.2%)]"
             >
               Select a coffee
             </button>
 
             <button
-              class="cursor-pointer rounded-[82.83px] border-[1.02px] bg-[#121517] border-[linear-gradient(146.68deg,#DADADA_-17.38%,rgba(218,218,218,0)_91.61%)] [border-image-slice:1] font-['Montserrat'] font-normal text-[24px] leading-[1.46] tracking-[-0.03em] px-10 py-4 text-white transition-all duration-300 ease-out hover:bg-[#1A1F1C] hover:scale-105"
+              class="cursor-pointer rounded-full lg:rounded-[82.83px] border border-gray-600 bg-[#121517] font-['Montserrat'] font-normal text-lg lg:text-[24px] leading-[1.46] tracking-[-0.03em] px-8 lg:px-10 py-4 text-white transition-all duration-300 ease-out hover:bg-[#1A1F1C] hover:scale-105"
             >
               More
             </button>
           </div>
 
           <!-- Statistika -->
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between gap-4">
             <div class="flex flex-col items-baseline">
               <span
-                class="font-['Montserrat'] font-normal text-[62px] leading-[1.09] tracking-[-0.03em] primary-color"
+                class="font-['Montserrat'] font-normal text-3xl md:text-5xl lg:text-[62px] leading-tight lg:leading-[1.09] tracking-[-0.03em] primary-color"
                 >9k <span class="font-semibold text-green-600">+</span></span
               ><span
-                class="font-['Montserrat'] font-normal text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
+                class="font-['Montserrat'] font-normal text-sm md:text-base lg:text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
                 >Premium <br />Users</span
               >
             </div>
             <div class="flex flex-col items-center">
               <span
-                class="font-['Montserrat'] font-normal text-[62px] leading-[1.09] tracking-[-0.03em] primary-color"
+                class="font-['Montserrat'] font-normal text-3xl md:text-5xl lg:text-[62px] leading-tight lg:leading-[1.09] tracking-[-0.03em] primary-color"
                 >2k <span class="font-semibold text-green-600">+</span></span
               ><span
-                class="font-['Montserrat'] font-normal text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
+                class="font-['Montserrat'] font-normal text-sm md:text-base lg:text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
                 >Happy <br />Customer</span
               >
             </div>
             <div class="flex flex-col items-center">
               <span
-                class="font-['Montserrat'] font-normal text-[62px] leading-[1.09] tracking-[-0.03em] primary-color"
+                class="font-['Montserrat'] font-normal text-3xl md:text-5xl lg:text-[62px] leading-tight lg:leading-[1.09] tracking-[-0.03em] primary-color"
                 >28 <span class="font-semibold text-green-600">+</span></span
               ><span
-                class="font-['Montserrat'] font-normal text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
+                class="font-['Montserrat'] font-normal text-sm md:text-base lg:text-[20px] leading-[1.44] tracking-[-0.02em] primary-color"
                 >Awards <br />
                 Winning</span
               >
@@ -140,49 +158,49 @@
       </div>
 
       <!-- Right  -->
-      <div class="relative">
+      <div class="relative order-1 lg:order-2">
         <!-- Blur background -->
-        <div class="absolute inset-0 pointer-events-none -z-10">
+        <div class="absolute inset-0 hidden pointer-events-none -z-10 md:block">
           <!-- Chap yuqori -->
           <img
             src="/images/img/blur-white.png"
             alt="Yashil blur"
-            class="absolute -top-10 -left-35"
+            class="absolute opacity-50 -top-10 -left-35"
           />
-          <!-- O‘ng past -->
+          <!-- O'ng past -->
           <img
             src="/images/svg/blur-green.svg"
             alt="Oq blur"
-            class="absolute -bottom-40 -right-10"
+            class="absolute opacity-50 -bottom-40 -right-10"
           />
         </div>
-        <div class="max-h-full">
-          <img src="/images/img/hero-img.png" alt="image" />
+        <div class="flex justify-center max-h-full">
+          <img src="/images/img/hero-img.png" alt="image" class="object-contain w-full max-w-md lg:max-w-full" />
         </div>
       </div>
     </main>
 
     <!-- We Have Section  -->
-    <section class="container m-auto mt-27.75 pl-20 pr-20">
+    <section class="container m-auto mt-16 lg:mt-27.75 px-4 md:px-8 lg:px-20">
       <div
-        class="rounded-[46px] bg-[linear-gradient(264.52deg,#FFFFFF_4.95%,#E5E5E5_64.19%,#FBFBFB_88.37%)] pt-12.75 pl-19.5 pr-19.5 pb-9"
+        class="rounded-3xl lg:rounded-[46px] bg-[linear-gradient(264.52deg,#FFFFFF_4.95%,#E5E5E5_64.19%,#FBFBFB_88.37%)] py-8 lg:pt-12.75 px-6 lg:px-19.5 lg:pb-9"
       >
-        <div class="grid grid-cols-3 gap-34.5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-34.5">
           <!-- Colms  -->
           <div class="relative z-10">
             <!-- Liked  -->
             <div class="flex flex-col items-center justify-center text-center">
-              <div>
-                <img src="/images/svg/liked.svg" alt="liked" />
+              <div class="mb-4">
+                <img src="/images/svg/liked.svg" alt="liked" class="w-16 h-16 md:w-20 md:h-20" />
               </div>
               <div>
                 <h4
-                  class="font-medium text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
+                  class="font-medium text-2xl lg:text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
                 >
                   Tasty
                 </h4>
                 <p
-                  class="font-normal text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
+                  class="font-normal text-base lg:text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
                 >
                   We have the most <br />
                   delicious coffee
@@ -193,17 +211,17 @@
 
           <!-- Colms  -->
           <div class="flex flex-col items-center justify-center text-center">
-            <div>
-              <img src="/images/svg/raketa-icon.svg" alt="liked" />
+            <div class="mb-4">
+              <img src="/images/svg/raketa-icon.svg" alt="liked" class="w-16 h-16 md:w-20 md:h-20" />
             </div>
             <div>
               <h4
-                class="font-medium text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
+                class="font-medium text-2xl lg:text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
               >
                 Fast
               </h4>
               <p
-                class="font-normal text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
+                class="font-normal text-base lg:text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
               >
                 Our cafe will serve <br />
                 you quickly
@@ -213,21 +231,21 @@
 
           <!-- Colms  -->
           <div class="flex flex-col items-center justify-center text-center">
-            <div>
+            <div class="mb-4">
               <img
-                class="w-46.25 h-45"
+                class="w-16 h-16 md:w-20 md:h-20"
                 src="/images/svg/money-icon.svg"
                 alt="liked"
               />
             </div>
             <div>
               <h4
-                class="font-medium text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
+                class="font-medium text-2xl lg:text-[32px] leading-[1.63] tracking-[-0.02em] secondary-color"
               >
                 Available
               </h4>
               <p
-                class="font-normal text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
+                class="font-normal text-base lg:text-[20.13px] leading-[1.63] tracking-[-0.02em] text-center"
               >
                 Cafe will serveat the <br />
                 most pleasant prices
@@ -239,50 +257,50 @@
     </section>
 
     <!-- We make Section  -->
-    <section class="container m-auto mt-25">
-      <div class="flex items-center justify-between">
+    <section class="container px-4 m-auto mt-16 lg:mt-25 md:px-8 lg:px-0">
+      <div class="flex flex-col items-center justify-between gap-8 lg:flex-row lg:gap-0">
         <!-- Section Img -->
-        <div>
-          <img src="/images/img/img-section.png" alt="images" />
+        <div class="flex justify-center w-full lg:w-auto">
+          <img src="/images/img/img-section.png" alt="images" class="object-contain w-full max-w-md lg:max-w-full" />
         </div>
 
         <!-- Info  -->
-        <div class="flex flex-col gap-15.75">
+        <div class="flex flex-col gap-8 lg:gap-15.75 text-center lg:text-left">
           <div>
             <h1
-              class="font-extrabold primary-color text-[80px] leading-[109%] tracking-[-0.03em]"
+              class="font-extrabold primary-color text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[109%] tracking-[-0.03em]"
             >
               We make <br />
               <span
-                class="font-extrabold text-[80px] leading-[109%] tracking-[-0.03em] bg-[linear-gradient(267.2deg,#237249_3.05%,#35C66B_75.72%)] bg-clip-text text-transparent"
+                class="font-extrabold text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[109%] tracking-[-0.03em] bg-[linear-gradient(267.2deg,#237249_3.05%,#35C66B_75.72%)] bg-clip-text text-transparent"
                 >delicious</span
               >
             </h1>
           </div>
           <div>
             <p
-              class="font-normal text-[20px] primary-color leading-[163%] tracking-[-0.02em]"
+              class="font-normal text-base md:text-lg lg:text-[20px] primary-color leading-relaxed lg:leading-[163%] tracking-[-0.02em]"
             >
-              Only in 2021 we have made more than 100,000 <br />
-              orders for you, your loved ones, all of you, and in <br />
+              Only in 2021 we have made more than 100,000 <br class="hidden lg:block" />
+              orders for you, your loved ones, all of you, and in <br class="hidden lg:block" />
               2022 we are ready to destroy the market
             </p>
           </div>
-          <div class="relative">
+          <div class="relative w-full">
             <div>
-              <img src="/images/img/make-img2.png" alt="images" />
+              <img src="/images/img/make-img2.png" alt="images" class="object-cover w-full rounded-lg" />
             </div>
-            <div class="absolute top-[40%] left-[30%]">
+            <div class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
               <button
-                class="flex cursor-pointer items-center gap-3 py-5 px-10.5 rounded-[83px] bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)]"
+                class="flex cursor-pointer items-center gap-2 lg:gap-3 py-3 lg:py-5 px-6 lg:px-10.5 rounded-full lg:rounded-[83px] bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] hover:scale-105 transition-transform"
               >
                 <img
                   src="/images/svg/play-icon.svg"
                   alt="icon"
-                  class="w-5 h-5"
+                  class="w-4 h-4 lg:w-5 lg:h-5"
                 />
                 <span
-                  class="font-normal primary-color text-[20px] leading-[163%] tracking-[-0.02em]"
+                  class="font-normal primary-color text-sm lg:text-[20px] leading-[163%] tracking-[-0.02em] whitespace-nowrap"
                 >
                   Cooking Process
                 </span>
@@ -294,12 +312,12 @@
     </section>
 
     <!-- New Our Produc  -->
-    <section class="container py-24 text-white ">
-      <div class="max-w-[1200px] mx-auto px-4">
+    <section class="container px-4 py-16 text-white lg:py-24 md:px-8 lg:px-0">
+      <div class="max-w-[1200px] mx-auto">
         <!-- Top text -->
-        <div class="flex items-start justify-between mb-20">
+        <div class="flex flex-col items-start justify-between gap-8 mb-12 lg:flex-row lg:mb-20">
           <h2
-            class="text-[80px] leading-[109%] tracking-[-0.03em] font-extrabold"
+            class="text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[109%] tracking-[-0.03em] font-extrabold"
           >
             New Our <br />
             <span
@@ -310,7 +328,7 @@
           </h2>
 
           <p
-            class="max-w-105 text-[20px] leading-[163%] tracking-[-0.02em] text-white/70"
+            class="max-w-full lg:max-w-105 text-base md:text-lg lg:text-[20px] leading-relaxed lg:leading-[163%] tracking-[-0.02em] text-white/70"
           >
             Have time to buy the most harmonious drinks in the new Starbucks
             coffee and don't forget about the discount! Starbucks coffee and
@@ -319,52 +337,48 @@
         </div>
 
         <!-- Cards -->
-        <div class="flex items-center gap-8">
-          <!-- Card -->
+        <div class="flex flex-col items-center gap-6 pb-4 overflow-x-auto md:flex-row lg:gap-8">
+          <!-- Card 1 -->
           <div
-            class="w-[320px] h-130 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_at_top,#1C2A23,#0B0E0D)] flex flex-col items-center text-center p-8"
+            class="w-full md:w-72 lg:w-80 h-auto lg:h-130 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_at_top,#1C2A23,#0B0E0D)] flex flex-col items-center text-center p-6 lg:p-8 flex-shrink-0"
           >
-            <div
-              class="flex items-center justify-center mb-8 w-50 h-65"
-            >
-             <img src="/images/img/usama-akram-zCDAYROwLC0-unsplash 2 (2).png" alt="">
+            <div class="flex items-center justify-center w-40 mb-6 lg:mb-8 h-52 lg:w-50 lg:h-65">
+              <img src="/images/img/usama-akram-zCDAYROwLC0-unsplash 2 (2).png" alt="" class="object-contain w-full h-full">
             </div>
 
-            <h3 class="text-[24px] font-semibold mb-2">Fast</h3>
-            <p class="mb-6 text-white/60">Our cafe will serve you quickly</p>
+            <h3 class="text-xl lg:text-[24px] font-semibold mb-2">Fast</h3>
+            <p class="mb-4 text-sm lg:mb-6 text-white/60 lg:text-base">Our cafe will serve you quickly</p>
 
-            <div class="flex items-center gap-6 mb-8">
-              <span class="text-[24px] font-semibold">7,45$</span>
-              <span class="text-white/60">330 ml</span>
+            <div class="flex items-center gap-4 mb-6 lg:gap-6 lg:mb-8">
+              <span class="text-xl lg:text-[24px] font-semibold">7,45$</span>
+              <span class="text-sm text-white/60 lg:text-base">330 ml</span>
             </div>
 
             <button
-              class="rounded-[83px] px-8 py-3 bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] font-medium"
+              class="rounded-full lg:rounded-[83px] px-6 lg:px-8 py-2.5 lg:py-3 bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] font-medium text-sm lg:text-base hover:scale-105 transition-transform"
             >
               Buy Product
             </button>
           </div>
 
-           <!-- Card -->
+          <!-- Card 2 -->
           <div
-            class="w-[320px] h-130 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_at_top,#1C2A23,#0B0E0D)] flex flex-col items-center text-center p-8"
+            class="w-full md:w-72 lg:w-80 h-auto lg:h-130 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_at_top,#1C2A23,#0B0E0D)] flex flex-col items-center text-center p-6 lg:p-8 flex-shrink-0"
           >
-            <div
-              class="flex items-center justify-center mb-8 w-50 h-65"
-            >
-             <img src="/images/img/usama-akram-zCDAYROwLC0-unsplash 2.png" alt="">
+            <div class="flex items-center justify-center w-40 mb-6 lg:mb-8 h-52 lg:w-50 lg:h-65">
+              <img src="/images/img/usama-akram-zCDAYROwLC0-unsplash 2.png" alt="" class="object-contain w-full h-full">
             </div>
 
-            <h3 class="text-[24px] font-semibold mb-2">Fast</h3>
-            <p class="mb-6 text-white/60">Our cafe will serve you quickly</p>
+            <h3 class="text-xl lg:text-[24px] font-semibold mb-2">Fast</h3>
+            <p class="mb-4 text-sm lg:mb-6 text-white/60 lg:text-base">Our cafe will serve you quickly</p>
 
-            <div class="flex items-center gap-6 mb-8">
-              <span class="text-[24px] font-semibold">7,45$</span>
-              <span class="text-white/60">330 ml</span>
+            <div class="flex items-center gap-4 mb-6 lg:gap-6 lg:mb-8">
+              <span class="text-xl lg:text-[24px] font-semibold">7,45$</span>
+              <span class="text-sm text-white/60 lg:text-base">330 ml</span>
             </div>
 
             <button
-              class="rounded-[83px] px-8 py-3 bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] font-medium"
+              class="rounded-full lg:rounded-[83px] px-6 lg:px-8 py-2.5 lg:py-3 bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] font-medium text-sm lg:text-base hover:scale-105 transition-transform"
             >
               Buy Product
             </button>
@@ -372,24 +386,22 @@
 
           <!-- Active Card -->
           <div
-            class="w-[320px] h-130 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_at_top,#1C2A23,#0B0E0D)] flex flex-col items-center text-center p-8"
+            class="w-full md:w-72 lg:w-80 h-auto lg:h-130 rounded-3xl border border-white/10 bg-[radial-gradient(ellipse_at_top,#1C2A23,#0B0E0D)] flex flex-col items-center text-center p-6 lg:p-8 flex-shrink-0"
           >
-            <div
-              class="flex items-center justify-center mb-8 w-55 h-70"
-            >
-              <img src="/images/img/usama-akram-zCDAYROwLC0-unsplash 2 (1).png" alt="">
+            <div class="flex items-center justify-center h-56 mb-6 lg:mb-8 w-44 lg:w-55 lg:h-70">
+              <img src="/images/img/usama-akram-zCDAYROwLC0-unsplash 2 (1).png" alt="" class="object-contain w-full h-full">
             </div>
 
-            <h3 class="text-[26px] font-semibold mb-2">Cappuccino</h3>
-            <p class="mb-6 text-white/60">Our cafe will serve you quickly</p>
+            <h3 class="text-xl lg:text-[26px] font-semibold mb-2">Cappuccino</h3>
+            <p class="mb-4 text-sm lg:mb-6 text-white/60 lg:text-base">Our cafe will serve you quickly</p>
 
-            <div class="flex items-center gap-6 mb-8">
-              <span class="text-[26px] font-semibold">7,45$</span>
-              <span class="text-white/60">330 ml</span>
+            <div class="flex items-center gap-4 mb-6 lg:gap-6 lg:mb-8">
+              <span class="text-xl lg:text-[26px] font-semibold">7,45$</span>
+              <span class="text-sm text-white/60 lg:text-base">330 ml</span>
             </div>
 
             <button
-              class="rounded-[83px] px-10 py-2.5 bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] font-medium"
+              class="rounded-full lg:rounded-[83px] px-8 lg:px-10 py-2.5 bg-[linear-gradient(265.23deg,#237249_6.79%,#35C66B_97.2%)] font-medium text-sm lg:text-base hover:scale-105 transition-transform"
             >
               Buy Product
             </button>
@@ -397,7 +409,7 @@
 
           <!-- Arrow -->
           <button
-            class="ml-8 w-16 h-16 rounded-full border border-[#35C66B] flex items-center justify-center text-[#35C66B] hover:bg-[#35C66B] hover:text-black transition"
+            class="hidden md:flex ml-0 md:ml-8 w-12 h-12 lg:w-16 lg:h-16 rounded-full border border-[#35C66B] items-center justify-center text-[#35C66B] hover:bg-[#35C66B] hover:text-black transition flex-shrink-0"
           >
             →
           </button>
